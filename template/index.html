@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speech to Sign Language Translation</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Center content vertically and horizontally */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background-image: url("{{ url_for('static', filename='bg.jpg') }}"); /* Set background image */
+            background-size: cover; /* Cover the entire viewport */
+            background-position: center; /* Center the background image */
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%; /* Set height to 100% */
+            border: 2px solid #ccc; /* Border style */
+            padding: 20px; /* Add padding for better spacing */
+        }
+        .text-center {
+            font-family: 'Arial';
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Speech to Sign Language Translation</h1>
+        <div class="row justify-content-center mt-3">
+            <!--<button id="recordButton" class="btn btn-primary" action="/translate" method="POST">Record Speech</button>-->
+            <form action="/translate" method="POST" class="btn btn-primary">
+              <input type="submit" value="Translate"/>
+            </form>
+        </div>
+    </div>
+    <!-- Bootstrap JS (optional if you need JavaScript) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.rawgit.com/xdan/datetimepicker/gh-pages/build/jquery.datetimepicker.full.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
